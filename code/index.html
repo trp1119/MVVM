@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="person.name">
+    <div>{{person.name}}</div>
+    {{person.name}}{{person.age}}
+  </div>
+  <script src="./MVVM/Dep.js"></script>
+  <script src="./MVVM/Watcher.js"></script>
+  <script src="./MVVM/Observer.js"></script>
+  <script src="./MVVM/Compiler.js"></script>
+  <script src="./MVVM/MVVM.JS"></script>
+  <script>
+    // 实例化 MVVM 对象
+    let vm = new MVVM({
+      el: '#app',
+      data: {
+        person: {
+          name: 'zhangsan',
+          age: 12
+        }
+      }
+    })
+  </script>
+</body>
+</html>
